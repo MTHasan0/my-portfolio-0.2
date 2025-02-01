@@ -1,5 +1,4 @@
 import React from 'react';
-import { FaArrowAltCircleRight } from 'react-icons/fa';
 import { FaArrowRight, FaCircleNotch, FaProductHunt } from 'react-icons/fa6';
 import { Link } from 'react-router-dom';
 

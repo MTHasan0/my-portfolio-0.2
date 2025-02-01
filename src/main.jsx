@@ -11,6 +11,9 @@ import About from './Page/About/About.jsx';
 import Service from './Page/Service/Service.jsx';
 import Testimonial from './Page/Testimonial/Testimonial.jsx';
 import Contact from './Page/Contact/Contact.jsx';
+import Work from './Page/Work/Work.jsx';
+import WorkCard from './Page/Work/WorkCard.jsx';
+
 
 const router = createBrowserRouter([
   {
@@ -39,8 +42,13 @@ const router = createBrowserRouter([
       },
       {
         path: '/work',
-        element: <Contact></Contact>,
+        element: <Work></Work>,
       },
+      {
+        path: '/work-card',
+        element: <WorkCard></WorkCard>
+      }
+
     ]
   },
 ]);
