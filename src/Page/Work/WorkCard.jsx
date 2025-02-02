@@ -4,7 +4,7 @@ const WorkCard = ({ data }) => {
     const { title, author, image, published_date } = data;
     return (
         <div className=' flex my-2  justify-center mx-auto  '>
-            <div className="card bg-base-100  w-[80%]  ">
+            <div className="card bg-base-100  w-[45%]  ">
 
                 <div className=' flex justify-between pl-6'>
                     <div className='  border-r border-slate-300 pr-2'>

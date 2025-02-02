@@ -35,12 +35,12 @@ const Testimonial = () => {
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ delay: index * 0.2, duration: 0.8 }}
                                 whileHover={{ scale: 1.05 }}
-                                className="bg-gradient-to-br rounded-2xl shadow-lg p-6 flex flex-col items-center text-center"
+                                className="bg-white bg-opacity-15 rounded-2xl shadow-lg p-6 flex flex-col items-center text-center"
                             >
                                 <motion.div
                                     whileHover={{ scale: 1.1 }}
                                     whileTap={{ scale: 0.95 }}
-                                    className="w-24 h-24 rounded-full overflow-hidden border-4 border-purple-200 mb-6"
+                                    className="w-24 h-24 rounded-full overflow-hidden border-4 border-pink-500 mb-6"
                                 >
                                     <img
                                         src={proPic}
