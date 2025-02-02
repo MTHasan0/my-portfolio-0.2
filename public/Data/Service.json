@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "title": "Frontend Development with React JS",
+        "description": "I specialize in building interactive, responsive, and high-performance web applications using React JS. From single-page applications to complex dashboards, I deliver seamless user experiences.",
+        "icon": "💻"
+    },
+    {
+        "id": 2,
+        "title": "UI/UX Design",
+        "description": "I create visually appealing and user-friendly designs that enhance user engagement. My designs are tailored to meet user needs while maintaining a modern and intuitive interface.",
+        "icon": "🎨"
+    },
+    {
+        "id": 3,
+        "title": "Research Content Writing",
+        "description": "I write high-quality, well-researched content for blogs, articles, and technical documentation. My focus is on clarity, accuracy, and engaging storytelling.",
+        "icon": "📝"
+    },
+    {
+        "id": 4,
+        "title": "Research Content Reviewing",
+        "description": "I provide thorough reviews of research content to ensure accuracy, coherence, and adherence to guidelines. My expertise ensures your content is polished and professional.",
+        "icon": "🔍"
+    }
+]
