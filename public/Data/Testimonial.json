@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "name": "John Doe",
+        "role": "CEO, Tech Solutions",
+        "comment": "Working with [Your Name] was an absolute pleasure. Their expertise in React and machine learning helped us build a cutting-edge application that exceeded our expectations.",
+        "image": "https://via.placeholder.com/150"
+    },
+    {
+        "id": 2,
+        "name": "Jane Smith",
+        "role": "Lead Developer, BioTech Inc.",
+        "comment": "[Your Name] is a highly skilled developer with a deep understanding of both frontend and backend technologies. Their work on our bioinformatics project was exceptional.",
+        "image": "https://via.placeholder.com/150"
+    },
+    {
+        "id": 3,
+        "name": "Alex Johnson",
+        "role": "Product Manager, DataWorks",
+        "comment": "The responsiveness and interactivity of the applications [Your Name] builds are unmatched. They are a true professional and a great team player.",
+        "image": "https://via.placeholder.com/150"
+    }
+]
