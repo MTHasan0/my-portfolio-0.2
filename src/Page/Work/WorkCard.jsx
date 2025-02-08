@@ -1,10 +1,13 @@
 import React from 'react';
+import ProjectCard from './ProjectCard';
 
-const WorkCard = ({ data }) => {
-    const { title, author, image, published_date } = data;
+const WorkCard = ({ publication }) => {
+
+    const { title, author, image, published_date } = publication;
+
     return (
-        <div className=' flex my-2  justify-center mx-auto  '>
-            <div className="card bg-base-100  w-[45%]  ">
+        <div className=' flex my-2  justify-center mx-auto gap-2'>
+            <div className="card bg-base-100  w-[40%]  ">
 
                 <div className=' flex justify-between pl-6'>
                     <div className='  border-r border-slate-300 pr-2'>
@@ -14,7 +17,7 @@ const WorkCard = ({ data }) => {
                     </div>
                     <div className="card-body ">
                         <h2 className="card-title">
-                            <h1>{title}</h1>
+                            <p>{title}</p>
                         </h2>
                         <p>{author}</p>
                         <div className="card-actions justify-end">

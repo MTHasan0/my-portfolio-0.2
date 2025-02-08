@@ -13,6 +13,7 @@ import Testimonial from './Page/Testimonial/Testimonial.jsx';
 import Contact from './Page/Contact/Contact.jsx';
 import Work from './Page/Work/Work.jsx';
 import WorkCard from './Page/Work/WorkCard.jsx';
+import ProjectCard from './Page/Work/ProjectCard.jsx';
 
 
 const router = createBrowserRouter([
@@ -47,6 +48,10 @@ const router = createBrowserRouter([
       {
         path: '/work-card',
         element: <WorkCard></WorkCard>
+      },
+      {
+        path: '/project',
+        element: <ProjectCard></ProjectCard>
       }
 
     ]
