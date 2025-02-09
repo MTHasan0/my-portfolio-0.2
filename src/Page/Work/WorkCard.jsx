@@ -7,7 +7,7 @@ const WorkCard = ({ publication }) => {
 
     return (
         <div className=' flex my-2  justify-center mx-auto gap-2'>
-            <div className="card bg-base-100  w-[40%]  ">
+            <div className="card bg-base-100  w-[80%]  ">
 
                 <div className=' flex justify-between pl-6'>
                     <div className='  border-r border-slate-300 pr-2'>

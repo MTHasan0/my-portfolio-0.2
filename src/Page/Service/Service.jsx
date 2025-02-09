@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from "framer-motion";
 import SliderMotion from '../../Components/SliderMotion/SliderMotion';
-import services from '../../../public/Data/Service.json'
+import services from '../../assets/Data/Service.json'
 
 const Service = () => {
     return (

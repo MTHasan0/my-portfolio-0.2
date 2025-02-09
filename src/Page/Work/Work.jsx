@@ -1,6 +1,6 @@
 import React from 'react';
 
-import publication from '../../../public/Data/Publication.json';
+import publication from '../../assets/Data/Publication.json';
 import WorkCard from './WorkCard';
 import SliderMotion from '../../Components/SliderMotion/SliderMotion';
 import { motion } from 'framer-motion';

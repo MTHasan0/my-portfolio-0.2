@@ -1,7 +1,6 @@
 import React from 'react';
 import { FaHouse } from "react-icons/fa6";
 import { FaPerson } from "react-icons/fa6";
-import { FaMessage } from "react-icons/fa6";
 import { FaBorderAll } from "react-icons/fa6";
 import { HiChatBubbleBottomCenter, HiEnvelope } from 'react-icons/hi2';
 import { Link, useLocation } from 'react-router-dom';

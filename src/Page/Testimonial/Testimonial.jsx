@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from "framer-motion";
 import SliderMotion from '../../Components/SliderMotion/SliderMotion';
-import testimonials from '../../../public/Data/Testimonial.json'
+import testimonials from '../../assets/Data/Testimonial.json'
 
 import proPic from '../../../public/Image/5b11c33d-f6a8-4e25-b639-036814bd6b11.png'
 

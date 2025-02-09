@@ -14,6 +14,7 @@ import Contact from './Page/Contact/Contact.jsx';
 import Work from './Page/Work/Work.jsx';
 import WorkCard from './Page/Work/WorkCard.jsx';
 import ProjectCard from './Page/Work/ProjectCard.jsx';
+import Project from './Page/Work/Project.jsx';
 
 
 const router = createBrowserRouter([
@@ -41,17 +42,14 @@ const router = createBrowserRouter([
         path: '/contact',
         element: <Contact></Contact>,
       },
+
       {
         path: '/work',
-        element: <Work></Work>,
-      },
-      {
-        path: '/work-card',
-        element: <WorkCard></WorkCard>
+        element: <Work></Work>
       },
       {
         path: '/project',
-        element: <ProjectCard></ProjectCard>
+        element: <Project></Project>
       }
 
     ]

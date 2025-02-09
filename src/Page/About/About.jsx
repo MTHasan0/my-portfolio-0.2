@@ -80,11 +80,9 @@ const About = () => {
                         variants={itemVariants}
                     >
                         <h2 className="text-3xl font-bold mb-6">Meet the Team</h2>
-                        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                        <div className=" mx-auto">
                             {[
-                                { name: "John Doe", role: "CEO", image: '' },
-                                { name: "Jane Smith", role: "CTO", image: "https://via.placeholder.com/150" },
-                                { name: "Alice Johnson", role: "Designer", image: "https://via.placeholder.com/150" },
+                                { name: "Tanvir Hasan", role: "Frontend Developer", image: "https://i.postimg.cc/x84c6bZb/image.png" },
                             ].map((member, index) => (
                                 <motion.div
                                     key={index}
@@ -93,7 +91,7 @@ const About = () => {
                                     whileHover={{ scale: 1.05 }}
                                 >
                                     <img
-                                        src={proPic}
+                                        src={member.image}
                                         alt={member.name}
                                         className="w-24 h-24 rounded-full mx-auto mb-4"
                                     />

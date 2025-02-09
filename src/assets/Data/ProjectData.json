@@ -37,7 +37,7 @@
         "framework": "ReactJs, NodeJS",
         "tools": "Firebase, MongoDB",
         "github": "https://github.com/MTHasan0/coffee-store-client",
-        "live": "https://coffee-store-demo.web.app" // Update this if you have a live demo URL
+        "live": "https://coffee-store-demo.web.app"
     },
     {
         "id": 5,
