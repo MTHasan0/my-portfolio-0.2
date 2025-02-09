@@ -24,14 +24,14 @@ const ProjectCard = ({ project }) => {
 
                         {/* Buttons Section */}
                         <div className="flex flex-col md:flex-row gap-2 mt-4">
-                            <div className="badge badge-outline h-8 w-full md:w-36 hover:bg-gradient-to-r from-rose-300 to-rose-500 font-bold hover:text-white">
+                            <div className="badge badge-outline h-8 w-full md:w-36 hover:bg-gradient-to-r from-rose-400 to-rose-800 font-bold hover:text-white">
                                 {framework}
                             </div>
                             <a
                                 href={github}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="badge badge-outline h-8 w-full md:w-36 font-bold hover:bg-gradient-to-r from-rose-300 to-rose-500 hover:text-white text-center"
+                                className="badge badge-outline h-8 w-full md:w-36 font-bold hover:bg-gradient-to-r from-rose-400 to-rose-800 hover:text-white text-center"
                             >
                                 GitHub
                             </a>
@@ -39,7 +39,7 @@ const ProjectCard = ({ project }) => {
                                 href={live}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="badge badge-outline h-8 w-full md:w-36 font-bold hover:bg-gradient-to-r from-rose-300 to-rose-500 hover:text-white text-center"
+                                className="badge badge-outline h-8 w-full md:w-36 font-bold hover:bg-gradient-to-r from-rose-400 to-rose-800 hover:text-white text-center"
                             >
                                 Live Demo
                             </a>

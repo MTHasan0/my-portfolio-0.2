@@ -12,7 +12,7 @@ const Testimonial = () => {
     return (
         <div>
             <SliderMotion></SliderMotion>
-            <div className="min-h-screen flex items-center justify-center p-6 text-white">
+            <div className="min-h-screen flex items-center justify-center p-6 text-white mb-20 lg:mb-0">
                 <motion.div
                     initial={{ opacity: 0, y: 50 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -25,7 +25,7 @@ const Testimonial = () => {
                         transition={{ delay: 0.2, duration: 0.8 }}
                         className="text-4xl md:text-5xl font-bold text-center mb-12"
                     >
-                        What People Say About Me
+                        Peoples feedback
                     </motion.h1>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {testimonials.map((testimonial, index) => (

@@ -5,6 +5,7 @@ import CircleBtn from '../../Components/Buttons/CircleBtn';
 import BgAnimation from './BgAnimation';
 import homeImage from '../../assets/man.png';
 
+
 const Home = () => {
     return (
         <div className=' text-white text-xl'>
@@ -45,9 +46,10 @@ const Home = () => {
             <div className=' w-[1200px] h-full absolute right-0 bottom-0  hidden xl:flex'>
 
                 <div className=' bg-none xl:flex  xl:bg-cover xl:bg-explosion xl:bg-right  xl:bg-no-repeat  w-full h-full translate-z-0'>
-                    <div className='  max-w-md flex absolute right-32 bottom-24  '>
+                    <div className='  max-w-md absolute right-32 top-1/4'>
 
                         <motion.div
+
                             initial={{ y: -100, opacity: 0 }}
                             animate={{ y: 0, opacity: 100 }}
                             transition={{ duration: 0.8, delay: 1.5 }}>

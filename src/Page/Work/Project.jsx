@@ -15,7 +15,7 @@ const Project = () => {
 
 
     return (
-        <div className='mx-auto '>
+        <div className='mx-auto mb-24 lg:mb-0'>
             <SliderMotion />
 
             <motion.div
