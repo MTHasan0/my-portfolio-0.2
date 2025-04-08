@@ -10,7 +10,7 @@ import { Link, useLocation } from 'react-router-dom';
 export const navData = [
     { name: 'home', path: '/', icon: <FaHouse /> },
     { name: 'about', path: '/about', icon: <FaPerson /> },
-    { name: 'service', path: '/service', icon: <FaBorderAll /> },
+    { name: 'Expertise', path: '/service', icon: <FaBorderAll /> },
     { name: 'testimonial', path: '/testimonial', icon: <HiChatBubbleBottomCenter /> },
     { name: 'contact', path: '/contact', icon: <HiEnvelope /> }
 ]

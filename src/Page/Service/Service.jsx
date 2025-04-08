@@ -20,7 +20,7 @@ const Service = () => {
                         transition={{ delay: 0.2, duration: 0.8 }}
                         className="text-4xl md:text-5xl font-bold text-white text-center mb-12"
                     >
-                        My Services
+                        My Expertise
                     </motion.h1>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                         {services.map((service, index) => (
