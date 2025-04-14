@@ -2,8 +2,7 @@ import React from 'react';
 import SliderMotion from '../../Components/SliderMotion/SliderMotion';
 import { motion } from 'framer-motion';
 import CircleBtn from '../../Components/Buttons/CircleBtn';
-import BgAnimation from './BgAnimation';
-import homeImage from '../../assets/profile_3.png';
+import homeImage from '../../assets/profile_3.png'
 
 
 const Home = () => {
