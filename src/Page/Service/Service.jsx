@@ -1,7 +1,10 @@
 import React from 'react';
-import { motion } from "framer-motion";
+import { easeOut, inView, motion } from "framer-motion";
 import SliderMotion from '../../Components/SliderMotion/SliderMotion';
 import services from '../../assets/Data/Service.json'
+import { FaFacebook, FaReact } from 'react-icons/fa6';
+import { SiFirebase, SiMongodb, SiNextdotjs, SiTailwindcss, SiVite } from 'react-icons/si';
+
 
 const Service = () => {
     return (
@@ -22,29 +25,55 @@ const Service = () => {
                     >
                         My Expertise
                     </motion.h1>
+                    <h1 className=' text-4xl text-white'>Framework and tools</h1>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                        {services.map((service, index) => (
+                        <div className=' flex gap-4'>
+
+
                             <motion.div
-                                key={service.id}
-                                initial={{ opacity: 0, y: 50 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ delay: index * 0.2, duration: 0.8 }}
-                                whileHover={{ scale: 1.05 }}
-                                className=" bg-white bg-opacity-20 rounded-2xl shadow-lg p-6 flex flex-col items-center text-center"
-                            >
-                                <motion.div
-                                    whileHover={{ scale: 1.2 }}
-                                    whileTap={{ scale: 0.9 }}
-                                    className="text-6xl mb-6"
-                                >
-                                    {service.icon}
-                                </motion.div>
-                                <h3 className="text-xl font-semibold text-white mb-4">
-                                    {service.title}
-                                </h3>
-                                <p className="text-white">{service.description}</p>
+                                initial={{ opacity: 0, y: 0 }}
+                                animate={{ opacity: 1, y: ['100%', '-100%'] }}
+                                transition={{ delay: 0.2, duration: 0.8, repeatType: Infinity }}
+                              
+                                className="">
+                                <div className="mask mask-hexagon w-24 h-24 bg-rose-500 text-white flex items-center ">
+                                    <FaReact className="text-5xl mx-auto my-auto" />
+
+                                </div>
                             </motion.div>
-                        ))}
+                            <div className="">
+                                <div className="mask mask-hexagon w-24 h-24 bg-rose-500 text-white flex items-center ">
+                                    <SiVite className="text-5xl mx-auto my-auto animate-pulse" />
+
+                                </div>
+                            </div>
+                            <div className="">
+                                <div className="mask mask-hexagon w-24 h-24 bg-rose-500 text-white flex items-center ">
+                                    <SiTailwindcss className="text-5xl mx-auto my-auto animate-pulse" />
+
+                                </div>
+                            </div>
+                            <div className="">
+                                <div className="mask mask-hexagon w-24 h-24 bg-rose-500 text-white flex items-center ">
+                                    <SiNextdotjs className="text-5xl mx-auto my-auto animate-pulse" />
+
+                                </div>
+                            </div>
+                            <div className="">
+                                <div className="mask mask-hexagon w-24 h-24 bg-rose-500 text-white flex items-center ">
+                                    <SiFirebase className="text-5xl mx-auto my-auto animate-pulse" />
+
+                                </div>
+                            </div>
+                            <div className="">
+                                <div className="mask mask-hexagon w-24 h-24 bg-rose-500 text-white flex items-center ">
+                                    <SiMongodb className="text-5xl mx-auto my-auto animate-pulse" />
+
+
+                                </div>
+
+                            </div>
+                        </div>
                     </div>
                 </motion.div>
             </div>

@@ -3,7 +3,8 @@ import SliderMotion from '../../Components/SliderMotion/SliderMotion';
 import { motion } from 'framer-motion';
 import CircleBtn from '../../Components/Buttons/CircleBtn';
 // import homeImage from '../../assets/profile_3.png'
-import homeImage from '../../assets/pro2.jpg'
+// import homeImage from '../../assets/pro2.jpg'
+import homeImage from '../../assets/ppp.png'
 
 
 const Home = () => {
@@ -51,14 +52,14 @@ const Home = () => {
 
                         <div >
                             <motion.div
-                                className='avatar bg-white/10 rounded-badge bg-opacity-10 mx-auto shadow-xl shadow-gray-700'
+                                className=' avatar bg-white/10 rounded-badge bg-opacity-10 mx-auto my-auto shadow-xl shadow-gray-700'
 
                                 initial={{ y: -100, opacity: 0 }}
                                 animate={{ y: 0, opacity: 100 }}
                                 transition={{ duration: 0.8, delay: 1.5 }}>
 
                                 <div class="mask mask-hexagon w-64 md:w-72 lg:w-80 xl:w-96 m-auto ">
-                                    <img className=' ' src={homeImage}></img>
+                                    <img className=' w-fit' src={homeImage}></img>
                                 </div>
 
                             </motion.div>

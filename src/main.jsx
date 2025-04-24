@@ -12,8 +12,6 @@ import Service from './Page/Service/Service.jsx';
 import Testimonial from './Page/Testimonial/Testimonial.jsx';
 import Contact from './Page/Contact/Contact.jsx';
 import Work from './Page/Work/Work.jsx';
-import WorkCard from './Page/Work/WorkCard.jsx';
-import ProjectCard from './Page/Work/ProjectCard.jsx';
 import Project from './Page/Work/Project.jsx';
 
 

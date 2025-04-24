@@ -3,7 +3,9 @@
 import React from 'react';
 import { motion } from "framer-motion";
 import SliderMotion from '../../Components/SliderMotion/SliderMotion';
-import profile from '../../assets/pro2.jpg'
+import profile from '../../assets/ppp.png'
+import { Link } from 'react-router-dom';
+import { FaFacebook, FaGithub, FaLinkedin, FaResearchgate } from 'react-icons/fa6';
 
 const About = () => {
     // Animation variants for Framer Motion
@@ -38,6 +40,7 @@ const About = () => {
                             variants={itemVariants}
 
 
+
                         >
 
                             <motion.p
@@ -61,6 +64,59 @@ const About = () => {
                                 variants={itemVariants}>
                                 Front-end Developer
                             </motion.p>
+                            <motion.p
+                                className=' text-md text-gray-400'
+                                variants={itemVariants}>
+                                Personal: tanvirhasan177@gmail.com <br />
+                                Academic: tanvir35-209@diu.edu.bd
+                                <div className=' flex justify-center space-x-5 mt-3'>
+                                    <motion.div
+                                        initial={{ opacity: 0, y: -50 }}
+                                        animate={{ opacity: 1, y: 0 }}
+                                        transition={{ delay: 0.4, duration: 0.8 }}
+                                        className="mt-12 flex justify-center space-x-6"
+                                    >
+                                        <motion.a
+                                            whileHover={{ scale: 1.2 }}
+                                            whileTap={{ scale: 0.9 }}
+                                            href="https://www.linkedin.com/in/md-tanvir-hasan/"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="text-white hover:text-rose-500 hover:bg-white"
+                                        >
+                                            <FaLinkedin className=" text-3xl"></FaLinkedin>
+                                        </motion.a>
+                                        <motion.a
+                                            whileHover={{ scale: 1.2 }}
+                                            whileTap={{ scale: 0.9 }}
+                                            href="https://github.com/MTHasan0"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="text-white hover:text-rose-500 hover:bg-white"
+                                        >
+                                            <FaGithub className=" text-3xl"></FaGithub>
+                                        </motion.a>
+                                        <motion.a
+                                            whileHover={{ scale: 1.2 }}
+                                            whileTap={{ scale: 0.9 }}
+                                            href="https://www.researchgate.net/profile/Md-Hasan-196/"
+                                            className="text-white hover:text-rose-500 hover:bg-white"
+                                        >
+                                            <FaResearchgate className=" text-3xl"></FaResearchgate>
+                                        </motion.a>
+                                        <motion.a
+                                            whileHover={{ scale: 1.2 }}
+                                            whileTap={{ scale: 0.9 }}
+                                            href="https://www.facebook.com/tanvir.niil/"
+                                            className="text-white hover:text-rose-500 hover:bg-white"
+                                        >
+                                            <FaFacebook className=" text-3xl"></FaFacebook>
+                                        </motion.a>
+                                    </motion.div>
+                                </div>
+                            </motion.p>
+
+
 
                         </motion.div>
                     </div>
@@ -110,27 +166,7 @@ const About = () => {
                         </div>
                     </motion.div>
 
-                    {/* Meet the Team Section */}
-                    <div className="">
-                        <motion.div
-                            className="bg-white/10 p-6 rounded-lg mt-12"
-                            variants={itemVariants}
-                        >
-                            <h2 className="text-3xl font-bold mb-6">Skill</h2>
-                            <div className=' flex gap-2 items-center'>
-                                <p className="text-gray-300 w-1/4">HTML</p>
-                                <progress class="progress progress-error border border-gray-800 h-5" value="90" max="100"></progress>
-                            </div>
-                            <div className=' flex gap-2 items-center '>
-                                <p className="text-gray-300 w-1/4">CSS</p>
-                                <progress class="progress progress-error border border-gray-800 h-5" value="80" max="100"></progress>
-                            </div>
-                            <div className=' flex gap-2 items-center'>
-                                <p className="text-gray-300 w-1/4">JavaScript</p>
-                                <progress class="progress progress-error border border-gray-800 h-5" value="70" max="100"></progress>
-                            </div>
-                        </motion.div>
-                    </div>
+
                 </motion.div>
             </div >
         </div >
