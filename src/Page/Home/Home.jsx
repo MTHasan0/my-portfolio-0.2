@@ -2,72 +2,56 @@ import React from 'react';
 import SliderMotion from '../../Components/SliderMotion/SliderMotion';
 import { motion } from 'framer-motion';
 import CircleBtn from '../../Components/Buttons/CircleBtn';
-// import homeImage from '../../assets/profile_3.png'
-// import homeImage from '../../assets/pro2.jpg'
-import homeImage from '../../assets/ppp.png'
-
+import homeImage from '../../assets/ppp.png';
 
 const Home = () => {
     return (
-        <div className=' text-white text-xl w-full'>
+        <div className='text-white text-xl w-full overflow-hidden'>
+            <SliderMotion />
 
-            <SliderMotion></SliderMotion>
-            <div>
-                <div className=' w-full h-full '>
-                    {/* Banner text */}
-                    <div className=' flex text-center flex-col justify-center  pt-40 xl:pt-40 xl:text-left md:text-left lg:text-left h-full container mx-auto '>
-                        <motion.div initial={{ y: -100, opacity: 0 }}
-                            animate={{ y: 0, opacity: 100 }}
-                            transition={{ duration: 0.5, delay: 1 }}>
-                            <p className=' text-3xl xl:text-5xl'>Hey this is
-                                <span className=' text-4xl xl:text-7xl font-bold text-rose-500'> "TANVIR"</span> <br /> a front-end web developer...
-                            </p><br />
-                            <p className=' mb-10 hidden md:flex lg:flex xl:flex'>If you want to know about my work, click on arrow bellow</p>
-                        </motion.div>
+            {/* Content Section */}
+            <div className='container mx-auto flex flex-col-reverse lg:flex-row items-center justify-between pt-10 md:pt-20 lg:pt-28 xl:pt-40 px-4 sm:px-6'>
 
-                        {/* btn */}
-                        <div className=' hidden lg:flex xl:flex md:flex flex-1 '>
-                            <motion.div
-                                initial={{ y: -100, opacity: 0 }}
-                                animate={{ y: 0, opacity: 100 }}
-                                transition={{ duration: 0.8, delay: 1.5 }}>
+                {/* Left Side - Text & Button */}
+                <div className='w-full lg:w-1/2 text-center lg:text-left space-y-4 sm:space-y-6 mt-8 lg:mt-0'>
+                    <motion.div
+                        initial={{ y: -100, opacity: 0 }}
+                        animate={{ y: 0, opacity: 1 }}
+                        transition={{ duration: 0.5, delay: 1 }}
+                    >
+                        <p className='text-2xl xs:text-3xl sm:text-4xl lg:text-5xl xl:text-6xl leading-tight'>
+                            Hey this is
+                            <span className='block text-rose-500 font-bold text-3xl xs:text-4xl sm:text-5xl xl:text-7xl mt-1 sm:mt-2'>TANVIR</span>
+                            <span className='block text-lg sm:text-xl md:text-2xl mt-2 sm:mt-4'>a front-end web developer...</span>
+                        </p>
+                        <p className='mt-3 sm:mt-4 text-base sm:text-lg md:text-xl'>
+                            If you want to know about my work, click on the arrow below
+                        </p>
+                    </motion.div>
 
-                                <CircleBtn></CircleBtn>
-
-                            </motion.div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-            </div>
-
-            {/* Bg Image */}
-
-            <div className=' w-[50%] mx-auto h-full xl:absolute items-center lg:right-0 xl:right-[8%] bottom-0'>
-
-                <div className=' bg-none flex   xl:bg-cover xl:bg-explosion xl:bg-right  xl:bg-no-repeat w-full h-full translate-z-0 '>
-                    <div className=' mx-auto xl:absolute md:absolute md:right-[10%] xl:right-[10%] xl:top-1/4 md:top-1/4 '>
-
-                        <div >
-                            <motion.div
-                                className=' avatar bg-white/10 rounded-badge bg-opacity-10 mx-auto my-auto shadow-xl shadow-gray-700'
-
-                                initial={{ y: -100, opacity: 0 }}
-                                animate={{ y: 0, opacity: 100 }}
-                                transition={{ duration: 0.8, delay: 1.5 }}>
-
-                                <div class="mask mask-hexagon w-64 md:w-72 lg:w-80 xl:w-96 m-auto ">
-                                    <img className=' w-fit' src={homeImage}></img>
-                                </div>
-
-                            </motion.div>
-                        </div>
-
-                    </div>
+                    <motion.div
+                        className='flex justify-center lg:justify-start mt-4 sm:mt-6'
+                        initial={{ y: -100, opacity: 0 }}
+                        animate={{ y: 0, opacity: 1 }}
+                        transition={{ duration: 0.8, delay: 1.5 }}
+                    >
+                        <CircleBtn />
+                    </motion.div>
                 </div>
 
+                {/* Right Side - Image */}
+                <div className='w-full lg:w-1/2 flex justify-center mb-6 sm:mb-10 lg:mb-0'>
+                    <motion.div
+                        className='avatar bg-white/10 rounded-badge shadow-xl shadow-gray-700'
+                        initial={{ y: -100, opacity: 0 }}
+                        animate={{ y: 0, opacity: 1 }}
+                        transition={{ duration: 0.8, delay: 1.5 }}
+                    >
+                        <div className='mask mask-hexagon w-40 xs:w-48 sm:w-56 md:w-64 lg:w-72 xl:w-80 2xl:w-96'>
+                            <img className='w-full object-cover' src={homeImage} alt="Tanvir" />
+                        </div>
+                    </motion.div>
+                </div>
             </div>
         </div>
     );

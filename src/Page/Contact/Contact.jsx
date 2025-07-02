@@ -1,8 +1,51 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import SliderMotion from '../../Components/SliderMotion/SliderMotion';
+import axios from 'axios';
+
+import messageSentPic from '../..//assets/MessageSent.svg';
+import Swal from 'sweetalert2';
 
 const Contact = () => {
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        const formData = e.target;
+        const name = formData.name.value;
+        const email = formData.email.value;
+        const message = formData.message.value;
+
+        const newMessage = { name, email, message };
+
+
+        try {
+            const response = await axios.post('https://mt-hasan-server.vercel.app/message', newMessage);
+            console.log('Response:', response.status);
+
+            if (response.status === 201) {
+                Swal.fire({
+                    title: "Sweet!",
+                    text: "Modal with a custom image.",
+                    imageUrl: messageSentPic,
+                    imageWidth: 400,
+                    imageHeight: 200,
+                    imageAlt: "Custom image"
+                });
+                formData.reset();
+            } else {
+                console.error('Unexpected response status:', response.status);
+                alert('Failed to send message. Please try again later.');
+            }
+
+        } catch (error) {
+            console.error('Error details:', {
+                message: error.message,
+                response: error.response
+            });
+            alert(`Failed to send message. Error: ${error.message}`);
+        }
+    };
+
     return (
         <div>
             <SliderMotion></SliderMotion>
@@ -32,6 +75,7 @@ const Contact = () => {
 
                     {/* Contact Form */}
                     <motion.form
+                        onSubmit={handleSubmit}
                         initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.6, duration: 0.8 }}
@@ -92,6 +136,7 @@ const Contact = () => {
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
                             type="submit"
+
                             className="w-full px-6 py-3 bg-pink-500 text-white rounded-lg hover:bg-pink-600 transition duration-300"
                         >
                             Send Message

@@ -48,7 +48,11 @@ const router = createBrowserRouter([
       {
         path: '/project',
         element: <Project></Project>
-      }
+      },
+      {
+        path: '/publications',
+        element: <Work></Work>
+      },
 
     ]
   },
@@ -59,4 +63,3 @@ createRoot(document.getElementById('root')).render(
     <div className=' '><RouterProvider router={router} /></div>
   </StrictMode>,
 )
-

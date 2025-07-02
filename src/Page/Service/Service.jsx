@@ -482,7 +482,7 @@ const Service = () => {
                                 >
                                     <motion.div
                                         variants={hoverVariants}
-                                        className={`h-32  rounded-2xl bg-gray-800/50 backdrop-blur-md border border-gray-700 flex flex-col items-center justify-center p-4 cursor-pointer transition-all ${hoveredSkill === skill ? 'ring-2 ring-rose-400' : ''
+                                        className={`h-32 rounded-md bg-gray-800/50 backdrop-blur-md border border-gray-700 flex flex-col items-center justify-center p-4 cursor-pointer transition-all ${hoveredSkill === skill ? 'ring-2 ring-rose-400 ' : ''
                                             }`}
                                         style={{
                                             transformStyle: 'preserve-3d',
@@ -511,10 +511,10 @@ const Service = () => {
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 exit={{ opacity: 0, y: 20 }}
-                                className="mt-12 p-6 bg-gray-800/50 backdrop-blur-md rounded-xl border border-gray-700 max-w-2xl mx-auto"
+                                className="mt-12 p-6 bg-gray-800/50 backdrop-blur-md rounded-md border border-gray-700 max-w-2xl mx-auto"
                             >
                                 <div className="flex items-center gap-4 mb-4">
-                                    <div className={`p-3 rounded-lg bg-gray-700 ${hoveredSkill.color}`}>
+                                    <div className={`p-3  bg-gray-700 ${hoveredSkill.color}`}>
                                         {React.cloneElement(hoveredSkill.icon, { className: "text-3xl" })}
                                     </div>
                                     <h3 className="text-2xl font-bold">{hoveredSkill.name}</h3>

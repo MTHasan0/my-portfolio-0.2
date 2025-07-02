@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import SliderMotion from '../../Components/SliderMotion/SliderMotion';
 import testimonials from '../../assets/Data/Testimonial.json'
 
-import proPic from '../../../public/Image/5b11c33d-f6a8-4e25-b639-036814bd6b11.png'
+
 
 const Testimonial = () => {
 
@@ -13,7 +13,8 @@ const Testimonial = () => {
         <div>
             <SliderMotion></SliderMotion>
             <div className="min-h-screen flex items-center justify-center p-6 text-white mb-20 lg:mb-0">
-                <motion.div
+                <alert className="text-3xl">...</alert>
+                {/* <motion.div
                     initial={{ opacity: 0, y: 50 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
@@ -56,7 +57,7 @@ const Testimonial = () => {
                             </motion.div>
                         ))}
                     </div>
-                </motion.div>
+                </motion.div> */}
             </div>
         </div>
     );

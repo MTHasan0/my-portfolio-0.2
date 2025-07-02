@@ -4,7 +4,7 @@ import React from 'react';
 import { motion } from "framer-motion";
 import SliderMotion from '../../Components/SliderMotion/SliderMotion';
 import profile from '../../assets/ppp.png'
-import { Link } from 'react-router-dom';
+
 import { FaFacebook, FaGithub, FaLinkedin, FaResearchgate } from 'react-icons/fa6';
 
 const About = () => {
@@ -121,7 +121,7 @@ const About = () => {
                         </motion.div>
                     </div>
 
-                    {/* Mission and Vision Section */}
+                    {/* Personal and academic details section */}
                     <motion.div
                         className="grid grid-cols-1 sm:grid-cols-2 gap-8"
                         variants={containerVariants}
@@ -152,13 +152,13 @@ const About = () => {
                                 <h2 className="text-2xl font-semibold mb-4">Experience</h2>
 
                                 <div>
-                                    <p className="text-gray-300">It Support and International Customer support</p>
-                                    <p className=' text-gray-500'>2023 - 2024</p>
-                                    <h4 className=' text-gray-500'>Hotel Heirloom (Student Job)</h4>
+                                    <p className="">House keeping and Foreign guests support</p>
+                                    <p className=' text-gray-500'>2023</p>
+                                    <h4 className=' text-gray-500'>Hotel Heirloom (Student Job), Belgium</h4>
                                 </div>
                                 <div className=' border-dotted border-2 my-2 border-gray-400'></div>
                                 <div>
-                                    <p className="text-gray-300">Research Assistant <span className=' text-gray-500'>( 2020 - 2022 )</span></p>
+                                    <p className="">Research Assistant <span className=' text-gray-500'>( 2020 - 2022 )</span></p>
                                     <h4 className=' text-gray-500'>Daffodil International University (Dhaka, Bangladesh)</h4>
                                 </div>
 

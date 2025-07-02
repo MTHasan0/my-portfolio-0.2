@@ -33,7 +33,10 @@ const Project = () => {
                             animate="visible"
                             transition={{ type: "spring", stiffness: 300, delay: index * 0.2 }}
                         >
+
+
                             <ProjectCard project={project}></ProjectCard>
+
                         </motion.div>
                     ))
 
