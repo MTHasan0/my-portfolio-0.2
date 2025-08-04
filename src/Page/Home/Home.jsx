@@ -3,6 +3,8 @@ import SliderMotion from '../../Components/SliderMotion/SliderMotion';
 import { motion } from 'framer-motion';
 import CircleBtn from '../../Components/Buttons/CircleBtn';
 import homeImage from '../../assets/ppp.png';
+import { FaGithub, FaJs, FaMdb, FaNode, FaReact } from 'react-icons/fa6';
+import { SiFirebase, SiVite } from 'react-icons/si';
 
 const Home = () => {
     return (
@@ -38,20 +40,28 @@ const Home = () => {
                         <CircleBtn />
                     </motion.div>
                 </div>
+                <div className=' absolute lg:relative'><FaJs className=' text-6xl opacity-20'></FaJs></div>
 
                 {/* Right Side - Image */}
                 <div className='w-full lg:w-1/2 flex justify-center mb-6 sm:mb-10 lg:mb-0'>
                     <motion.div
-                        className='avatar bg-white/10 rounded-badge shadow-xl shadow-gray-700'
+                        className='avatar bg-transparent rounded-badge shadow-xl '
                         initial={{ y: -100, opacity: 0 }}
                         animate={{ y: 0, opacity: 1 }}
                         transition={{ duration: 0.8, delay: 1.5 }}
                     >
-                        <div className='mask mask-hexagon w-40 xs:w-48 sm:w-56 md:w-64 lg:w-72 xl:w-80 2xl:w-96'>
+                        <div className=' w-40 xs:w-48 sm:w-56 rounded-full md:w-64 lg:w-96 xl:w-96 h-40 xs:h-48 sm:h-56 md:h-64 lg:h-96 xl:h-96'>
                             <img className='w-full object-cover' src={homeImage} alt="Tanvir" />
+
                         </div>
+                        <div className=' absolute -left-20 -lg:left-10 '><FaReact className=' text-6xl opacity-15 animate-spin-slow'></FaReact></div>
                     </motion.div>
+                    <div className=" absolute top-48 left-32 lg:top-10 lg:left-96"><FaGithub className=' text-6xl opacity-10 ' /></div>
+                    <div className=' absolute right-10 lg:right-40 top-28'><SiVite className=' text-6xl opacity-20'></SiVite></div>
+
                 </div>
+                <div className=' absolute bottom-48 left-10 lg:bottom-10 animate-pulse '><FaNode className=' text-6xl opacity-20'></FaNode></div>
+                <div className=' lg:pt-40  absolute bottom-28 right-10'><SiFirebase className=' text-6xl opacity-20 ' /></div>
             </div>
         </div>
     );

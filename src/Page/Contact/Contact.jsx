@@ -2,48 +2,66 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import SliderMotion from '../../Components/SliderMotion/SliderMotion';
 import axios from 'axios';
-
-import messageSentPic from '../..//assets/MessageSent.svg';
 import Swal from 'sweetalert2';
+import sentMessageImage from '../../assets/MessageSent.svg'
+
+
 
 const Contact = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const formData = e.target;
-        const name = formData.name.value;
-        const email = formData.email.value;
-        const message = formData.message.value;
+        const name = e.target.name.value;
+        const email = e.target.email.value;
+        const message = e.target.message.value;
 
         const newMessage = { name, email, message };
 
 
         try {
-            const response = await axios.post('https://mt-hasan-server.vercel.app/message', newMessage);
-            console.log('Response:', response.status);
-
+            console.log('Sending message:', newMessage);
+            const response = await axios.post('https://mt-hasan-server.onrender.com/message', newMessage);
             if (response.status === 201) {
                 Swal.fire({
-                    title: "Sweet!",
-                    text: "Modal with a custom image.",
-                    imageUrl: messageSentPic,
+                    title: "Message Sent!",
+                    text: "Your message has been sent successfully.",
+                    icon: "success",
+                    confirmButtonText: "OK",
+                    imageUrl: sentMessageImage,
                     imageWidth: 400,
                     imageHeight: 200,
-                    imageAlt: "Custom image"
-                });
-                formData.reset();
-            } else {
-                console.error('Unexpected response status:', response.status);
-                alert('Failed to send message. Please try again later.');
-            }
+                    imageAlt: 'Sent Message Image',
+                })
+                e.target.reset(); // Reset the form after successful submission
+
+
+            } else (
+                Swal.fire({
+                    title: "Error",
+                    text: "Failed to send your message. Please try again later.",
+                    icon: "error",
+                    confirmButtonText: "OK",
+                    imageUrl: sentMessageImage,
+                    imageWidth: 400,
+                    imageHeight: 200,
+                    imageAlt: 'Sent Message Image',
+                }
+                ))
 
         } catch (error) {
-            console.error('Error details:', {
-                message: error.message,
-                response: error.response
+            console.error('Error sending message:', error);
+            Swal.fire({
+                title: "Error",
+                text: "Failed to send your message. Please try again later.",
+                icon: "error",
+                confirmButtonText: "OK",
+                imageUrl: sentMessageImage,
+                imageWidth: 400,
+                imageHeight: 200,
+                imageAlt: 'Sent Message Image',
             });
-            alert(`Failed to send message. Error: ${error.message}`);
         }
+
     };
 
     return (
@@ -74,74 +92,74 @@ const Contact = () => {
                     </motion.p>
 
                     {/* Contact Form */}
-                    <motion.form
-                        onSubmit={handleSubmit}
-                        initial={{ opacity: 0, y: 50 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.6, duration: 0.8 }}
-                        className="space-y-6"
-                    >
-                        <div>
-                            <label
-                                htmlFor="name"
-                                className="block text-sm font-medium text-white"
-                            >
-                                Your Name
-                            </label>
-                            <motion.input
-                                whileFocus={{ scale: 1.02 }}
-                                type="text"
-                                id="name"
-                                name="name"
-                                className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-600"
-                                placeholder="John Doe"
-                                required
-                            />
-                        </div>
-                        <div>
-                            <label
-                                htmlFor="email"
-                                className="block text-sm font-medium text-white"
-                            >
-                                Your Email
-                            </label>
-                            <motion.input
-                                whileFocus={{ scale: 1.02 }}
-                                type="email"
-                                id="email"
-                                name="email"
-                                className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-600"
-                                placeholder="johndoe@example.com"
-                                required
-                            />
-                        </div>
-                        <div>
-                            <label
-                                htmlFor="message"
-                                className="block text-sm font-medium text-white"
-                            >
-                                Your Message
-                            </label>
-                            <motion.textarea
-                                whileFocus={{ scale: 1.02 }}
-                                id="message"
-                                name="message"
-                                rows="4"
-                                className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-600"
-                                placeholder="Hi [Your Name], I'd love to collaborate with you!"
-                                required
-                            />
-                        </div>
-                        <motion.button
-                            whileHover={{ scale: 1.05 }}
-                            whileTap={{ scale: 0.95 }}
-                            type="submit"
+                    <motion.div>
+                        <form
+                            onSubmit={handleSubmit}
+                            initial={{ opacity: 0, y: 50 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 0.6, duration: 0.8 }}
+                            className="space-y-6">
+                            <div>
+                                <label
+                                    htmlFor="name"
+                                    className="block text-sm font-medium text-white"
+                                >
+                                    Your Name
+                                </label>
+                                <motion.input
+                                    whileFocus={{ scale: 1.02 }}
+                                    type="text"
+                                    id="name"
+                                    name="name"
+                                    className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-600"
+                                    placeholder="John Doe"
+                                    required
+                                />
+                            </div>
+                            <div>
+                                <label
+                                    htmlFor="email"
+                                    className="block text-sm font-medium text-white"
+                                >
+                                    Your Email
+                                </label>
+                                <motion.input
+                                    whileFocus={{ scale: 1.02 }}
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-600"
+                                    placeholder="johndoe@example.com"
+                                    required
+                                />
+                            </div>
+                            <div>
+                                <label
+                                    htmlFor="message"
+                                    className="block text-sm font-medium text-white"
+                                >
+                                    Your Message
+                                </label>
+                                <motion.textarea
+                                    whileFocus={{ scale: 1.02 }}
+                                    id="message"
+                                    name="message"
+                                    rows="4"
+                                    className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-600"
+                                    placeholder="Write me here..."
+                                    required
+                                />
+                            </div>
+                            <motion.button
+                                whileHover={{ scale: 1.05 }}
 
-                            className="w-full px-6 py-3 bg-pink-500 text-white rounded-lg hover:bg-pink-600 transition duration-300"
-                        >
-                            Send Message
-                        </motion.button>
-                    </motion.form>
+                                type="submit"
+                                className="w-full px-6 py-3 bg-pink-500 text-white rounded-lg hover:bg-pink-600 transition duration-300"
+                            >
+                                Send Message
+                            </motion.button>
+                        </form>
+                    </motion.div>
 
                     {/* Social Media Links */}
                     <motion.div
@@ -208,7 +226,7 @@ const Contact = () => {
                     </motion.div>
                 </motion.div>
             </div>
-        </div>
+        </div >
     );
 };
 
