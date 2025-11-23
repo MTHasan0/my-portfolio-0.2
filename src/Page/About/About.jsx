@@ -3,7 +3,7 @@
 import React from 'react';
 import { motion } from "framer-motion";
 import SliderMotion from '../../Components/SliderMotion/SliderMotion';
-import profile from '../../assets/ppp.png'
+import profile from '../../assets/Profile0.1.png'
 
 import { FaFacebook, FaGithub, FaLinkedin, FaResearchgate } from 'react-icons/fa6';
 
@@ -152,7 +152,7 @@ const About = () => {
                                 <h2 className="text-2xl font-semibold mb-4">Experience</h2>
 
                                 <div>
-                                    <p className="">House keeping and Foreign guests support</p>
+                                    <p className="">Foreign guests support</p>
                                     <p className=' text-gray-500'>2023</p>
                                     <h4 className=' text-gray-500'>Hotel Heirloom (Student Job), Belgium</h4>
                                 </div>

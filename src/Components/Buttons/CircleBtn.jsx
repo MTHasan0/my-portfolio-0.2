@@ -4,6 +4,15 @@ import { HiEnvelope } from 'react-icons/hi2';
 import { Link } from 'react-router-dom';
 
 const CircleBtn = () => {
+    const handleDownload = () => {
+        const pdfUrl = "Tanvir_Hasan.pdf";
+        const link = document.createElement("a");
+        link.href = pdfUrl;
+        link.download = "Tanvir_Hasan.pdf";
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    };
     return (
         <div className='mx-auto xl:mx-0'>
             <Link
@@ -21,16 +30,15 @@ const CircleBtn = () => {
 
             </Link>
 
-            <div className=' flex gap-5 mt-5'>
+            <div className='flex gap-5 mt-5 md:mb-28'>
                 <div>
-                    <a
+                    <button onClick={() => handleDownload()}
                         href="../../../public/Tanvir_Hasan.pdf"
-                        download
                         className="inline-flex items-center gap-2 px-4 py-2 border border-gray-700 hover:border-transparent transition-all duration-500 bg-transparent text-white rounded hover:bg-gray-200/10"
                     >
                         <FaDownload />
                         Download CV
-                    </a>
+                    </button>
                 </div>
                 <div className=''>
                     <Link to={'/contact'} className="inline-flex items-center gap-2 px-4 py-2 border border-gray-700 hover:border-transparent transition-all duration-500 bg-transparent text-white rounded hover:bg-gray-200/10"
