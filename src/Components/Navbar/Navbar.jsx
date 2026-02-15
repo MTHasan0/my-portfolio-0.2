@@ -20,7 +20,7 @@ const Navbar = () => {
     const pathName = useLocation().pathname;
     return (
         <nav className='flex flex-col items-center xl:justify-center gap-y-4 fixed h-max bottom-0 mt-auto xl:right-[2%] z-50 top-0 w-full xl:w-16 xl:max-w-md xl:h-screen'>
-            <div className=' flex w-full text-white text-xl xl:flex-col items-center justify-between xl:justify-center md:gap-y-10 px-6 md:px-40 xl:px-0 h-6 xl:h-max py-10 bg-gradient-to-r from-black to-blue-800 lg:bg-none lg:bg-white/20 backdrop-blur-lg xl:text-2xl xl:rounded-full'>
+            <div className=' flex w-full text-white text-xl xl:flex-col py-6 items-center justify-between xl:justify-center md:gap-y-10 px-6 md:px-40 xl:px-0 h-6 xl:h-max bg-gradient-to-r from-black to-blue-800 lg:bg-none lg:bg-white/20 backdrop-blur-lg xl:text-2xl xl:rounded-full'>
                 {navData.map((link, index) => {
                     return <Link className={`${link.path === pathName && ' text-rose-500'} relative flex items-center group hover:text-rose-500 transition-all duration-300`} to={link.path} key={index}>
                         <div className=' absolute pr-14 right-0 hidden xl:group-hover:flex '>

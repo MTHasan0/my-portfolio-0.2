@@ -152,7 +152,7 @@ const About = () => {
                                 <h2 className="text-2xl font-semibold mb-4">Experience</h2>
 
                                 <div>
-                                    <p className="">Foreign guests support</p>
+                                    <p className="">Foreign guests support (Student Job)</p>
                                     <p className=' text-gray-500'>2023</p>
                                     <h4 className=' text-gray-500'>Hotel Heirloom (Student Job), Belgium</h4>
                                 </div>

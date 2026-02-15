@@ -1,0 +1,6 @@
+.bg-image {
+    mask-image: url('../../assets/bg1.png');
+    mask-size: cover;
+    mask-position: center;
+    mask-repeat: no-repeat;
+}

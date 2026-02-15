@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import SliderMotion from '../../Components/SliderMotion/SliderMotion';
 import axios from 'axios';
@@ -8,6 +8,7 @@ import sentMessageImage from '../../assets/MessageSent.svg'
 
 
 const Contact = () => {
+    const [isLoading, setIsLoading] = useState(false)
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -16,6 +17,7 @@ const Contact = () => {
         const message = e.target.message.value;
 
         const newMessage = { name, email, message };
+        setIsLoading(true);
 
 
         try {
@@ -33,12 +35,13 @@ const Contact = () => {
                     imageAlt: 'Sent Message Image',
                 })
                 e.target.reset(); // Reset the form after successful submission
+                setIsLoading(false);
 
 
             } else (
                 Swal.fire({
                     title: "Error",
-                    text: "Failed to send your message. Please try again later.",
+                    text: "Failed to send your message. Please try again later not 202.",
                     icon: "error",
                     confirmButtonText: "OK",
                     imageUrl: sentMessageImage,
@@ -52,7 +55,7 @@ const Contact = () => {
             console.error('Error sending message:', error);
             Swal.fire({
                 title: "Error",
-                text: "Failed to send your message. Please try again later.",
+                text: "Failed to send your message. Please try again later 404.",
                 icon: "error",
                 confirmButtonText: "OK",
                 imageUrl: sentMessageImage,
@@ -156,7 +159,8 @@ const Contact = () => {
                                 type="submit"
                                 className="w-full px-6 py-3 bg-pink-500 text-white rounded-lg hover:bg-pink-600 transition duration-300"
                             >
-                                Send Message
+                                {isLoading ? (<span className="loading loading-bars loading-xl"> Sending..</span>) : ('Send Message')}
+
                             </motion.button>
                         </form>
                     </motion.div>
