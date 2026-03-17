@@ -22,7 +22,7 @@ const Contact = () => {
 
         try {
             console.log('Sending message:', newMessage);
-            const response = await axios.post('https://mt-hasan-server.onrender.com/message', newMessage);
+            const response = await axios.post('https://mt-hasan-server.vercel.app/message', newMessage);
             if (response.status === 201) {
                 Swal.fire({
                     title: "Message Sent!",
