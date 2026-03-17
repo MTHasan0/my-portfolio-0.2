@@ -49,7 +49,10 @@ const Contact = () => {
                     imageHeight: 200,
                     imageAlt: 'Sent Message Image',
                 }
-                ))
+
+                )
+
+            )
 
         } catch (error) {
             console.error('Error sending message:', error);
@@ -64,6 +67,8 @@ const Contact = () => {
                 imageAlt: 'Sent Message Image',
             });
         }
+
+        setIsLoading(false);
 
     };
 

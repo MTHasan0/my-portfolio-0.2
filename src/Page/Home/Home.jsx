@@ -198,7 +198,7 @@ const Home = () => {
                 </div>
 
                 {/* RIGHT SIDE IMAGE */}
-                <div className="w-full lg:w-1/2 flex justify-center">
+                <div className="w-full lg:w-1/3 flex justify-center">
 
                     <motion.div
                         initial={{ x: 400, opacity: 0 }}
